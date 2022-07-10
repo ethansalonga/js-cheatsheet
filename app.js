@@ -1,10 +1,11 @@
-/** DATA TYPES
+/**********
+ *  DATA TYPES
  *  String
  *  Number
  *  Boolean
  *  Undefined
  *  Null
- */
+ **********/
 
 /* STRING */
 "Hello world"
@@ -65,10 +66,16 @@ console.log(bool)
 !false // Returns true
 // !== is not equal to
 
-/** CONDITIONALS
+/**********
+ *  CONDITIONALS
  *  if else
  *  else if
- */
+ *  comparison operators
+ *  logical operators
+ *  falsy values
+ *  truthy values
+ *  ternary operators
+ **********/
 
 let subscribed = true
 let loggedIn = true
@@ -132,7 +139,83 @@ if (cash >= price || isStoreOpen) {
 let val = "Ethan"
 
 if (val) {
-  console.log(!!val);
+  console.log(!!val)
 } else {
-  console.log(!!val);
+  console.log(!!val)
+}
+
+/* TERNARY OPERATORS */
+// Shortcut for an if else condition
+// isObese ? "unhealthy" : "healthy"
+// subscribed ? "show video" : "hide video"
+
+let hot = true
+hot ? console.log("weather is hot outside") : console.log("weather is cold")
+
+subscribed = false
+loggedIn = true
+
+str = subscribed || loggedIn ? "show the video" : "hide the video"
+console.log(str)
+
+cash = 50
+price = 40
+isStoreOpen = true
+
+str = cash >= price && isStoreOpen ? "give receipt" : "do not give receipt"
+console.log(str)
+
+/**********
+ *  LOOPS
+ *  for loop
+ *  while loop
+ *  do while loop
+ **********/
+
+// Repeat the same code over and over again
+// DRY = Don't repeat yourself
+
+/* WHILE LOOP */
+let count = 1
+while (count <= 100) {
+  console.log(count)
+  count++
+  // count--
+}
+
+/* FOR LOOP */
+for (let i = 0; i < 100; i++) {
+  console.log(i + 1)
+}
+
+// set "i" to 0
+// "i" less than how many times we want to loop
+// increment "i" by 1
+
+/** Write a for-loop that loops through 1 to 20
+ * If the number is divisible by 3, print "Frontend"
+ * If the number is divisible by 5, print "Simplified"
+ * If the number is divisible by 3 and 5, print "Frontend Simplified"
+ * If the number is *not* divisble by either 3 or 5, print the number
+ */
+
+for (i = 1; i <= 20; i++) {
+  if (i % 3 === 0 && i % 5 === 0) {
+    console.log(`${i} -> Frontend Simplified`)
+  } else if (i % 3 === 0) {
+    console.log(`${i} -> Frontend`)
+  } else if (i % 5 === 0) {
+    console.log(`${i} -> Simplified`)
+  } else {
+    console.log(`${i} -> ${i}`)
+  }
+}
+
+/** Print out every character from the string
+ *  "Frontend Simplified"
+ */
+
+str = "Frontend Simplified"
+for (i = 0; i < str.length; i++) {
+  console.log(str[i])
 }
