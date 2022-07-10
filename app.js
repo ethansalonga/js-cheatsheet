@@ -219,3 +219,43 @@ str = "Frontend Simplified"
 for (i = 0; i < str.length; i++) {
   console.log(str[i])
 }
+
+/**********
+ *  FUNCTIONS
+ *
+ **********/
+
+// A block of code designed to perform a particular task
+// DRY - Don't repeat yourself
+
+// Function definition
+function welcomePersonToFES(firstName, lastName) {
+  console.log(`Welcome to FES, ${firstName} ${lastName}`)
+}
+
+// Call the function
+welcomePersonToFES("Ethan", "Salonga")
+welcomePersonToFES("John", "Doe")
+
+function sumOfTwoNumbers(num1, num2) {
+  // parameter when defining
+  return num1 / num2
+}
+
+console.log(sumOfTwoNumbers(10, 20)) // argument when calling
+
+/** Create a function that converts Celsius to Fahrenheit
+ *  Celsius to Fahrenheit formula:
+ *  F = C x 1.8 + 32
+ */
+
+// function celsiusToFahrenheit(celsius) {
+//   return celsius * 1.8 + 32
+// }
+
+// Arrow function
+const celsiusToFahrenheit = (celsius) => {
+  return celsius * 1.8 + 32
+}
+
+console.log(celsiusToFahrenheit(0))
