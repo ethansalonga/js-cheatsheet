@@ -84,13 +84,55 @@ if (subscribed === true) {
 let cash = 90
 let price = 40
 
-const change = cash - price
-const owed = price - cash
+const difference = cash - price
 
 if (cash > price) {
-  console.log(`you paid extra - here's ${change} dollars change`)
+  console.log(`you paid extra - here's ${difference} dollars change`)
 } else if (cash === price) {
   console.log("you paid the exact amount, have a nice day!")
 } else {
-  console.log(`not enough money - you still owe ${owed} dollars`)
+  console.log(`not enough money - you still owe ${difference * -1} dollars`)
+}
+
+/* COMPARISON OPERATORS */
+// >, <, >=, <=
+
+/* LOGICAL OPERATORS */
+// && checks if the left and right side of the comparison is true
+cash = 50
+price = 40
+let isStoreOpen = false
+
+if (cash >= price && isStoreOpen) {
+  console.log("print the receipt")
+}
+
+// || checks if the left or right side of the comparison is true
+if (cash >= price || isStoreOpen) {
+  console.log("print the receipt")
+}
+
+/* FALSY VALUES */
+// undefined
+// null
+// NaN
+// 0
+// ("")
+// false
+
+/* TRUTHY VALUES */
+// 10
+// 3.14
+// "Frontend Simplified"
+// "false"
+// "0"
+
+// []
+// {}
+let val = "Ethan"
+
+if (val) {
+  console.log(!!val);
+} else {
+  console.log(!!val);
 }
