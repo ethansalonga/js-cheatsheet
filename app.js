@@ -340,3 +340,87 @@ for (i = 0; i < dollars.length; i++) {
 }
 
 console.log(cents)
+
+/**
+ * OBJECTS
+ */
+
+// Used to store multiple properties in one variable
+let userFirstName = "Ethan"
+let useLastName = "Salonga"
+let userDiscordId = "Ethan Salonga#0001"
+let userSubscriptionStatus = "VIP"
+
+let users = [
+  {
+    username: "Ethan",
+    email: "ethan@ethansalonga.dev",
+    password: "test123",
+    subscriptionStatus: "VIP",
+    discordID: "Ethan Salonga#0001",
+    lessonsCompleted: [0, 1],
+  },
+  {
+    username: "JohnDoe",
+    email: "johndoe@ethansalonga.dev",
+    password: "johndoe123",
+    subscriptionStatus: "VIP",
+    discordID: "John Doe#0001",
+    lessonsCompleted: [0, 1, 2, 3],
+  },
+  {
+    username: "JaneDoe",
+    email: "janedoe@ethansalonga.dev",
+    password: "janedoe123",
+    subscriptionStatus: "VIP",
+    discordID: "Jane Doe#0001",
+    lessonsCompleted: [0, 1, 2, 3],
+  },
+]
+
+function login(email, password) {
+  for (let i = 0; i < users.length; i++) {
+    if (users[i].email === email) {
+      console.log(users[i])
+      if (users[i].password === password) {
+        console.log("log the user in - the details are correct")
+      } else {
+        console.log("password is incorrect - try again")
+      }
+      return
+    }
+  }
+  console.log("could not find an email that matches")
+}
+
+login("doesn'texist@ethansalonga.dev", "test123")
+
+console.log(users[0].lessonsCompleted.map((elem) => elem * 2))
+
+/** Create a register function that accepts:
+ *  - username
+ *  - email
+ *  - password
+ *  - subscriptionStatus
+ *  - discordId
+ *  - lessonsCompleted
+ *
+ *  Inside your register function:
+ *  1. Create a user object
+ *  2. Push this user object onto the "users" array
+ */
+
+function register(user) {
+  users.push(user)
+}
+
+register({
+  username: "NewUser",
+  email: "newuser@ethansalonga.dev",
+  password: "abc@123",
+  subscriptionStatus: "Pro",
+  discordId: "New User#1234",
+  lessonsCompleted: [2, 4, 7, 9, 10],
+})
+
+console.log(users)
