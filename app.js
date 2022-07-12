@@ -222,7 +222,6 @@ for (i = 0; i < str.length; i++) {
 
 /**********
  *  FUNCTIONS
- *
  **********/
 
 // A block of code designed to perform a particular task
@@ -259,3 +258,85 @@ const celsiusToFahrenheit = (celsius) => {
 }
 
 console.log(celsiusToFahrenheit(0))
+
+/**
+ * ARRAYS
+ * push
+ * filter
+ * map
+ */
+
+// Data structure that can hold multiple data values in one variable
+let item1 = 20
+let item2 = 30
+let item3 = 40
+let item4 = 50
+let item5 = 100
+
+let arr = [20, 30, 40, 50, 100]
+// Index starts from 0
+// First element of array:
+console.log(arr[0])
+
+// Last element of array:
+console.log(arr[arr.length - 1])
+
+/* PUSH Add element onto end of array */
+arr.push(200)
+
+/* FILTER */
+let newArr = arr.filter((element) => element < 50)
+
+console.log(newArr)
+
+// NOTE: Javascript executes line by line
+
+/** Filter out all the "FAIL" elements in an array
+ */
+
+let grades = ["A+", "A", "FAIL"]
+
+console.log(grades.filter((element) => element !== "FAIL"))
+
+/** Filter out all the "FAIL" elements in an array
+ *  without using the Array.filter method
+ */
+
+// Create a new empty array called "goodGrades"
+let goodGrades = []
+
+for (let i = 0; i < grades.length; i++) {
+  // add the element onto "goodGrades" only if the current element is not equal to "FAIL"
+  if (grades[i] !== "FAIL") {
+    goodGrades.push(grades[i])
+  }
+
+  console.log(goodGrades)
+}
+
+/* MAP */
+arr = [1, 4, 9, 16]
+
+let newArray = arr.map((element) => 10)
+
+console.log(newArray)
+
+/** Turn each element in an array of dollars into cents */
+
+let dollars = [1, 5, 10, 3]
+
+let cents = dollars.map((element) => element * 100)
+
+console.log(cents)
+
+/** Turn each element in an array of dollars into cents
+ *  without using the map method
+ */
+
+cents = []
+
+for (i = 0; i < dollars.length; i++) {
+  cents.push(dollars[i] * 100)
+}
+
+console.log(cents)
