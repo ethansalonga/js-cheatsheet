@@ -259,12 +259,12 @@ const celsiusToFahrenheit = (celsius) => {
 
 console.log(celsiusToFahrenheit(0))
 
-/**
+/**********
  * ARRAYS
  * push
  * filter
  * map
- */
+ **********/
 
 // Data structure that can hold multiple data values in one variable
 let item1 = 20
@@ -341,9 +341,9 @@ for (i = 0; i < dollars.length; i++) {
 
 console.log(cents)
 
-/**
+/**********
  * OBJECTS
- */
+ **********/
 
 // Used to store multiple properties in one variable
 let userFirstName = "Ethan"
@@ -424,3 +424,33 @@ register({
 })
 
 console.log(users)
+
+/**********
+ * DOM
+ **********/
+
+// The DOM allows you to access and change the styling and content of elements on your website
+
+// First way of accessing an element
+console.log(document.querySelector("h1"))
+
+// Second way of accessing an element
+console.log(document.getElementById("title"))
+
+// Change HTML
+document.querySelector(".title").innerHTML += "Frontend Simplified"
+
+let a = 1
+a += 2
+console.log(a)
+
+// Change CSS
+document.querySelector(".title").style.fontSize = "28px"
+
+function changeTitleToRed() {
+  document.querySelector(".title").style.color = "red"
+}
+
+function toggleDarkMode() {
+  document.querySelector("body").classList.toggle("dark-theme")
+}
